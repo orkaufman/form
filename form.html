@@ -1,0 +1,96 @@
+<html dir="ltr" lang="en">
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <title>
+
+    </title>
+
+    <script>
+ function validateForm() {
+      var form = document.forms["signup"];
+      
+      var firstname = form["firstname"].value;
+      var firstname = form["lastname"].value;
+      var firstname = form["username"].value;
+      var password = form["password"].value;
+      var password2 = form["password2"].value;
+    var birthyear = form["birthyear"].value;
+      
+      
+
+    if(password!= password2)
+    {
+    alert("password dont match! try again.");
+    }
+    if (firstname.length > 6) 
+    {
+alert("user name too long");
+    }
+    if(birthyear > 1999)
+    {
+        alert("you are to young")
+    }
+ }
+ 
+</script>
+</head>
+
+<body>
+    <br/> 
+    <br/> 
+    <br/> 
+    <div class="container">
+    <form id="signup">
+        <div class="form-group">
+    <label for=" first name">first name:</label>
+     <input type="text" name="firstname" class="from-control">
+        </div>
+           <div class="form-group">
+    <label for="last name">last name:</label>
+     <input type="text" name="lastname" class="from-control">
+        </div>
+          <div class="form-group">
+    <label for="username">username:</label>
+    <input type="text" name="username" class="from-control">
+        </div>
+           <div class="form-group">
+    <label for="password">password:</label>
+    <input type="password" name="password" class="from-control">
+        </div>
+   <div class="form-group">
+    <label for="password again">password again:</label>
+    <input type="password" name="password2"  class="from-control">
+        </div>
+        <div class="form-group">
+    <label for="birthyear">birthyear:</label>
+   <input type="number" name="birthyear"  class="from-control">
+        </div>
+  </div>
+  
+  
+        
+     
+  
+         
+        
+
+        <button onclick="validateForm()">Submit</button>
+    </form>
+    <div/> 
+
+
+</body>
+
+</html>
